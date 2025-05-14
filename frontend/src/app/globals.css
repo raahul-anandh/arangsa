@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar {
+  @apply bg-gradient-to-tr from-purple-100 via-purple-200 to-blue-200;
+}
+
+.text {
+  @apply font-black font-iconsolata;
+}
