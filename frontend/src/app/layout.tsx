@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import { Electrolize, Gowun_Dodum, Iceland, Inconsolata } from "next/font/google";
+import { GoogleOAuthProvider } from '@react-oauth/google';
+
+const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -40,7 +43,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${gowunDodumFont.variable} ${electrolizeFont.variable} ${icelandFont.variable} ${iconsolata.variable}`}>
-        < Navbar />
+        <GoogleOAuthProvider clientId = {GOOGLE_CLIENT_ID}>
+          < Navbar />
+        </GoogleOAuthProvider>
         {children}
       </body>
     </html>
