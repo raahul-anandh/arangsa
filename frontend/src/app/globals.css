@@ -3,9 +3,18 @@
 @tailwind utilities;
 
 .navbar {
-  @apply bg-gradient-to-tr from-purple-100 via-purple-200 to-blue-200;
+  @apply bg-paige;
 }
 
-.text {
-  @apply font-black font-iconsolata;
+.iconsolata-normal {
+  @apply font-iconsolata font-normal;
 }
+
+.iconsolata-medium {
+  @apply font-iconsolata font-medium;
+}
+
+.iconsolata-semibold {
+  @apply font-iconsolata font-semibold;
+}
+

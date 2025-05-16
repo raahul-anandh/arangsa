@@ -31,7 +31,7 @@ const icelandFont = Iceland ({
 
 const iconsolata = Inconsolata ({
   subsets: ["latin"],
-  weight: ["300"],
+  weight: ["200","300","400","500","600"],
   variable: "--font-iconsolata"
 })
 

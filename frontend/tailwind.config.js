@@ -11,6 +11,11 @@ module.exports = {
         electrolize: ["var(--font-electrolize)"],
         iceland: ["var(--font-iceland)"],
         iconsolata: ["var(--font-iconsolata)"],
+      },
+      colors: {
+        paige: '#FFF2F2',
+        wine: '#3A0519',
+        dyan: "#69247C",
       }
     },
   },
