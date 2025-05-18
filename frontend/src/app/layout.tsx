@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import { Electrolize, Gowun_Dodum, Iceland, Inconsolata } from "next/font/google";
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import { AuthProvider } from "@/contexts/authContext";
 
 const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
 
@@ -44,9 +45,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${gowunDodumFont.variable} ${electrolizeFont.variable} ${icelandFont.variable} ${iconsolata.variable}`}>
         <GoogleOAuthProvider clientId = {GOOGLE_CLIENT_ID}>
-          < Navbar />
+          <AuthProvider>
+            < Navbar />
+            {children}
+          </AuthProvider>
         </GoogleOAuthProvider>
-        {children}
       </body>
     </html>
   );

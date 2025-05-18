@@ -9,7 +9,7 @@ export default function Home() {
           It distills raw opinions into clear, actionable perspectives—so you can listen at scale, spot emerging themes, and align faster. 
           Whether it’s from employees or customers, make every voice count.</p>
         <div className="flex justify-center gap-8">
-          <a href="/create" className="btn-primary bg-wine text-white p-4 rounded-3xl">
+          <a href="/form/[formId]" className="btn-primary bg-wine text-white p-4 rounded-3xl">
             Create Form
           </a>
           <button className="btn-secondary bg-wine text-white p-4 rounded-3xl">

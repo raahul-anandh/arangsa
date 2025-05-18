@@ -1,10 +1,14 @@
+'use client'
+
 import React from "react";
 import NavbarButton from "./NavbarButton";
 import Image from 'next/image';
 import Link from 'next/link';
+import { useAuth } from "../contexts/authContext"
 
 function Navbar() {
-  const isLoggedIn = true;
+  const { user } = useAuth();
+  const isLoggedIn = !!user;
 
   return (
     <nav className = "navbar flex h-16 items-center justify-between px-6 w-full">
